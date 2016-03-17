@@ -6,19 +6,28 @@
 </head>
 <body>
     <?php
-        if (isset($_POST['prenom'])) {
-            $prenom = $_POST['prenom'];
-            if (isset($_POST['familier'])) {
-                $bonjour = "Salut";
-            }
-            else {
-                $bonjour = "Bonjour";
-            }
-            echo "$bonjour $prenom !";
+    if (isset($_POST['prenom'])) {
+        $prenom = $_POST['prenom'];
+        if (isset($_POST['familier'])) {
+            $bonjour = "Salut";
         }
         else {
-            echo "Aucun prénom !";
+            $bonjour = "Bonjour";
         }
+        $politesse = "mademoiselle";
+        switch ($_POST['politesse']) {
+        case "Mme":
+            $politesse = "madame";
+            break;
+        case "M.":
+            $politesse = "monsieur";
+            break;
+        }
+        echo "$bonjour $politesse $prenom !";
+    }
+    else {
+        echo "Aucun prénom !";
+    }
     ?>
 </body>
 </html>
