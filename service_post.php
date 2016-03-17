@@ -1,3 +1,5 @@
+<?php require 'fonctions.php'; ?>
+
 <!doctype html>
 <html>
 <head>
@@ -7,7 +9,7 @@
 <body>
     <?php
     if (isset($_POST['service'])) {
-        echo "Le code du service choisi est " . $_POST['service'];
+        echo "Le code du service choisi est " . escape($_POST['service']);
     }
     else {
         echo "Aucun service choisi !";

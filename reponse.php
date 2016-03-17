@@ -1,3 +1,5 @@
+<?php require 'fonctions.php'; ?>
+
 <!doctype html>
 <html>
 <head>
@@ -23,7 +25,7 @@
             $politesse = "monsieur";
             break;
         }
-        echo "$bonjour $politesse $prenom !";
+        echo "$bonjour $politesse " . escape($prenom) . " !";
     }
     else {
         echo "Aucun prénom !";
