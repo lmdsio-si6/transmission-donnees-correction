@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Choix d'un service</h1>
-    <form class="formulaire" action="service_post.php" method="post">
+    <form action="service_post.php" method="post">
     <p>
     <label for="serv">Service :</label>
         <select name="service" id="serv">
